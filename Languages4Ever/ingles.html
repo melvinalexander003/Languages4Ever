@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages4Ever | English Academy</title>
+    <meta name="description" content="Aprende inglés online en vivo con Languages4Ever: cursos por niveles (A1-C1), inglés técnico, preparación para Call Center, certificaciones internacionales y tutorías personalizadas.">
+    <meta name="theme-color" content="#0f172a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Languages4Ever | English Academy">
+    <meta property="og:description" content="Clases de inglés 100% en línea y en vivo: niveles A1-C1, inglés técnico, Call Center, certificaciones oficiales y tutorías.">
+    <meta property="og:image" content="assets/img/logo-ingles.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0265d2',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                            dark: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0c4a6e 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        dialog#info-modal::backdrop {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300" id="main-header">
+        <div id="header-inner" class="w-full px-4 sm:px-6 lg:pl-5 xl:pl-8 lg:pr-12 xl:pr-14 lg:py-1.5 lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-x-8 xl:gap-x-12 transition-all duration-300">
+
+            <div id="header-part-1" class="h-24 sm:h-28 lg:h-[117px] flex items-center justify-between lg:justify-start">
+                <a href="index.html" class="flex items-center gap-2.5 text-slate-900 tracking-tight flex-shrink-0">
+                    <img src="assets/img/logo-ingles.png" alt="Languages4Ever English Academy Logo" class="w-[76px] h-[76px] sm:w-[86px] sm:h-[86px] lg:w-[117px] lg:h-[117px] rounded-full object-cover border-2 border-black lg:border-transparent shadow-sm lg:shadow-none flex-shrink-0 transition-all duration-300">
+                    <span class="relative flex items-center text-left">
+                        <span class="text-2xl sm:text-[28px] font-display font-bold text-slate-900 leading-none">Languages4Ever</span>
+                        <span class="absolute left-0 top-full mt-1.5 text-xs sm:text-sm font-semibold text-black tracking-wide leading-none whitespace-nowrap">English Academy</span>
+                    </span>
+                </a>
+
+                <div class="flex items-center gap-2 lg:hidden">
+                    <a href="tienda.html" class="relative p-2 rounded-lg text-slate-700 hover:bg-slate-100" aria-label="Carrito">
+                        <i class="fa-solid fa-bag-shopping text-lg text-brand-600"></i>
+                        <span id="mobile-cart-badge" class="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-brand-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
+                    </a>
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="header-right-col" class="w-full lg:max-w-[550px] xl:max-w-[600px] lg:h-[117px] lg:flex lg:flex-col lg:justify-between lg:pt-[44px] lg:pb-[25px]">
+                <div id="header-part-2" class="hidden lg:flex items-center w-full">
+                    <nav class="w-full flex items-center justify-between font-bold text-xs lg:text-sm lg:leading-none text-slate-700 whitespace-nowrap" id="desktop-nav">
+                        <a href="index.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">Home</a>
+                        <a href="ingles.html" class="text-brand-600 font-bold transition-colors">Inglés</a>
+                        <a href="espanol.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">Español</a>
+                        <a href="frances.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">Francés</a>
+                        <a href="app.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">App</a>
+                        <a href="tienda.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">Tienda</a>
+                        <a href="test-nivel.html" class="[@media(hover:hover)]:hover:text-brand-600 transition-colors">Test de Nivel</a>
+                    </nav>
+                </div>
+
+                <div id="header-part-3" class="-mx-4 sm:-mx-6 lg:mx-0 lg:w-full bg-slate-50/95 lg:bg-transparent border-t border-slate-200/80 lg:border-t-0">
+                    <div id="sub-nav-scroll" class="relative px-4 sm:px-6 lg:px-0 w-full h-10 lg:h-auto flex items-center lg:justify-between gap-5 lg:gap-0 overflow-x-auto no-scrollbar text-xs lg:text-sm lg:leading-none font-bold text-slate-700">
+                        <a href="#cursos" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="cursos">Niveles</a>
+                        <a href="#especializados" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="especializados">Especializaciones</a>
+                        <a href="#tutorias" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="tutorias">Tutorías</a>
+                        <a href="#requisitos" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="requisitos">Requisitos</a>
+                        <a href="#metodologia" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="metodologia">Metodología</a>
+                        <a href="#contacto" class="section-link [@media(hover:hover)]:hover:text-brand-600 active:text-brand-600 whitespace-nowrap transition-colors" data-section="contacto">Inscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 text-center">
+            <a href="index.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">Home</a>
+            <a href="ingles.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-brand-600 font-bold bg-brand-50">Inglés</a>
+            <a href="espanol.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">Español</a>
+            <a href="frances.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">Francés</a>
+            <a href="app.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">App</a>
+            <a href="tienda.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">Tienda</a>
+            <a href="test-nivel.html" class="mobile-link block text-center px-3 py-2 rounded-lg text-slate-700 font-medium hover:bg-slate-50">Test de Nivel</a>
+            <a href="#contacto" data-course="Agendar Clase Demo Gratis" class="mobile-link block w-full text-center mt-3 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-md inline-flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Agendar Clase Demo Gratis</span>
+            </a>
+        </div>
+    </header>
+
+    <div id="pc-floating-controls" class="hidden lg:flex fixed top-1.5 right-3 xl:right-4 z-[60] w-10 h-[117px] flex-col items-end justify-center gap-2 pointer-events-none">
+        <button id="pc-dropdown-btn" type="button" class="pointer-events-auto w-[22px] h-[22px] rounded-full bg-brand-600 hover:bg-brand-700 text-white border border-white/20 text-[9px] flex items-center justify-center shadow-sm transition-all hover:scale-105" title="Abrir menú" aria-label="Abrir menú">
+            <i id="pc-dropdown-icon" class="fa-solid fa-bars"></i>
+        </button>
+
+        <button id="pc-toggle-bar-btn" type="button" class="pointer-events-auto w-[22px] h-[22px] rounded-full bg-slate-800 hover:bg-slate-700 text-white border border-white/20 text-[9px] flex items-center justify-center shadow-sm transition-all hover:scale-105" title="Ocultar barra superior" aria-label="Ocultar barra superior">
+            <i id="pc-toggle-bar-icon" class="fa-solid fa-eye-slash"></i>
+        </button>
+
+        <a href="tienda.html" id="header-cart-link" class="pointer-events-auto relative w-[22px] h-[22px] rounded-full bg-amber-500 hover:bg-amber-600 text-white border border-amber-600/30 text-[9px] flex items-center justify-center shadow-sm transition-all hover:scale-105" title="Carrito Académico" aria-label="Carrito Académico">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cart-badge" class="absolute -top-1 -left-1 min-w-[13px] h-[13px] px-0.5 rounded-full bg-slate-900 text-white border border-white text-[8px] font-bold flex items-center justify-center leading-none">0</span>
+        </a>
+    </div>
+
+    <div id="custom-dropdown" class="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-md hidden flex flex-col justify-between p-6">
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 text-white font-display font-bold text-xl tracking-tight">
+                <img src="assets/img/logo-ingles.png" alt="Logo" class="w-12 h-12 rounded-full object-cover border-2 border-white/20">
+                <span>Languages4Ever</span>
+            </a>
+            <button id="close-dropdown-btn" type="button" class="lg:hidden w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" title="Cerrar menú">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 flex flex-col items-center justify-center space-y-5 text-center py-6">
+            <a href="index.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">Home</a>
+            <a href="ingles.html" class="dropdown-link text-xl font-bold text-brand-400 transition-colors">Inglés</a>
+            <a href="espanol.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">Español</a>
+            <a href="frances.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">Francés</a>
+            <a href="app.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">App</a>
+            <a href="tienda.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">Tienda</a>
+            <a href="test-nivel.html" class="dropdown-link text-xl font-medium text-white hover:text-brand-400 transition-colors">Test de Nivel</a>
+        </div>
+
+        <div class="lg:hidden">
+            <a href="#contacto" data-course="Agendar Clase Demo Gratis" data-close-dropdown class="block w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center shadow-lg inline-flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Agendar Clase Demo Gratis</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="relative gradient-bg text-white overflow-hidden py-20 lg:py-28">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 xl:gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-xs sm:text-sm font-medium text-emerald-300 mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Clases 100% En Línea &amp; En Vivo
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight mb-6">
+                        Domina el inglés y abre <span class="gradient-text">nuevas puertas</span> profesionales
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg font-normal leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Con nuestros planes podrás desarrollar una comunicación fluida y construir bases sólidas desde cero, adquirir el vocabulario técnico especializado para destacar en tu profesión, prepararte para entrar fácilmente a la industria del call center con total seguridad, certificar tus habilidades mediante exámenes oficiales de prestigio internacional, y recibir acompañamiento personalizado con tutorías a tu medida para superar cualquier meta.
+                    </p>
+
+                    <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-bold font-display text-white">Flexibilidad</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Horarios Adaptables</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-bold font-display text-white">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Práctico y Conversacional</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-bold font-display text-white">Certificados</p>
+                            <p class="text-xs sm:text-sm text-slate-400">Preparación Oficial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="glass-card rounded-3xl p-6 lg:p-6 xl:p-8 text-slate-900 shadow-2xl relative z-10 border border-white/40">
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-200/60 mb-6">
+                            <div>
+                                <h3 class="font-display font-bold text-xl text-slate-900">Planes Disponibles</h3>
+                                <p class="text-xs text-slate-500">Opciones adaptadas a tus metas</p>
+                            </div>
+                            <span class="p-3 bg-brand-50 text-brand-600 rounded-2xl">
+                                <i class="fa-solid fa-graduation-cap text-xl"></i>
+                            </span>
+                        </div>
+
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div class="p-2 bg-emerald-100 text-emerald-700 rounded-lg mt-0.5">
+                                    <i class="fa-solid fa-tag text-xs"></i>
+                                </div>
+                                <div class="space-y-0.5 w-full">
+                                    <h4 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                                        <span>Niveles de Inglés</span>
+                                        <span class="text-xs font-bold text-brand-600">$55/mes</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600">Básico (A1-A2), Intermedio (B1-B2) y Avanzado (C1)</p>
+                                    <p class="text-[11px] text-slate-500">3 hrs síncronas semanales</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div class="p-2 bg-amber-100 text-amber-700 rounded-lg mt-0.5">
+                                    <i class="fa-solid fa-gear text-xs"></i>
+                                </div>
+                                <div class="space-y-0.5 w-full">
+                                    <h4 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                                        <span>Inglés Técnico</span>
+                                        <span class="text-xs font-bold text-brand-600">$90/mes</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600">Salud, Administración, Software y áreas técnicas</p>
+                                    <p class="text-[11px] text-slate-500">3 Meses (36 hrs síncronas)</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div class="p-2 bg-brand-100 text-brand-700 rounded-lg mt-0.5">
+                                    <i class="fa-solid fa-bolt text-xs"></i>
+                                </div>
+                                <div class="space-y-0.5 w-full">
+                                    <h4 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                                        <span>Inglés para Call Center</span>
+                                        <span class="text-xs font-bold text-brand-600">$105/mes</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600">Entrenamiento intensivo BPO y Mock Interviews</p>
+                                    <p class="text-[11px] text-slate-500">2 Meses (32 hrs síncronas)</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div class="p-2 bg-indigo-100 text-indigo-700 rounded-lg mt-0.5">
+                                    <i class="fa-solid fa-award text-xs"></i>
+                                </div>
+                                <div class="space-y-0.5 w-full">
+                                    <h4 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                                        <span>Certificaciones Internacionales</span>
+                                        <span class="text-xs font-bold text-brand-600">$120/mes</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600">Estrategias para TOEFL, IELTS, TOEIC y Cambridge</p>
+                                    <p class="text-[11px] text-slate-500">2 Meses (24 hrs síncronas)</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                <div class="p-2 bg-purple-100 text-purple-700 rounded-lg mt-0.5">
+                                    <i class="fa-solid fa-clock text-xs"></i>
+                                </div>
+                                <div class="space-y-0.5 w-full">
+                                    <h4 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                                        <span>Tutorías de Inglés</span>
+                                        <span class="text-xs font-bold text-brand-600">Desde $7.00 / hr</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-600">Acompañamiento personalizado para tareas, exámenes o proyectos</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="mt-6 pt-4 border-t border-slate-200/60 text-center">
+                            <a href="#contacto" data-apply-promo class="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-semibold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md hover:scale-[1.02]">
+                                <i class="fa-solid fa-gift text-emerald-600 text-base"></i>
+                                <span>¡20% OFF Grupal! Inscríbete con 2 personas o más y ahorra<sup>1</sup></span>
+                                <i class="fa-solid fa-arrow-right text-xs text-emerald-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cursos" class="py-20 bg-white scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-100/80 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-indigo-200">
+                    Ruta Académica
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mb-4">
+                    Niveles de Inglés
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+                    Programas estructurados bajo el Marco Común Europeo (MCER)<sup>2</sup> por solo:
+                </p>
+                <div class="mt-6">
+                    <span class="text-3xl font-extrabold text-indigo-600 bg-white border border-indigo-200 shadow-sm px-6 py-2.5 rounded-2xl inline-block">
+                        $55 <span class="text-base font-medium text-slate-500">/ mes</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group bg-emerald-100/70 border-2 border-emerald-300 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-display font-bold text-emerald-950">Básico</h3>
+                            <span class="bg-emerald-200 text-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors duration-300 group-hover:bg-emerald-600 group-hover:text-white">
+                                A1 - A2
+                            </span>
+                        </div>
+
+                        <div class="space-y-2.5 mb-6 text-sm font-semibold text-emerald-950/90">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-clock text-emerald-700 text-base"></i>
+                                <span>3 hrs síncronas + 5 hrs asíncronas por semana</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-calendar-days text-emerald-700 text-base"></i>
+                                <span>Duración: 6 meses (72 hrs síncronas)</span>
+                            </div>
+                        </div>
+
+                        <hr class="border-emerald-300/80 mb-6">
+
+                        <ul class="space-y-3 mb-8 text-sm font-medium text-emerald-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-700 mt-1 flex-shrink-0"></i>
+                                <span>Comprensión de expresiones cotidianas básicas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-700 mt-1 flex-shrink-0"></i>
+                                <span>Presentación personal e intercambio de datos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-700 mt-1 flex-shrink-0"></i>
+                                <span>Descripción de entorno y necesidades inmediatas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-700 mt-1 flex-shrink-0"></i>
+                                <span>Interacción sencilla sobre temas familiares</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" data-course="Inglés Básico (A1 - A2)" class="w-full text-center bg-white border border-emerald-400 text-emerald-900 font-bold py-3 px-4 rounded-xl hover:bg-emerald-700 hover:text-white hover:border-emerald-700 transition-all duration-300 shadow-sm block">
+                        Inscribirme a Básico
+                    </a>
+                </article>
+
+                <article class="group bg-blue-100/70 border-2 border-blue-300 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-display font-bold text-blue-950">Intermedio</h3>
+                            <span class="bg-blue-200 text-blue-900 text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                                B1 - B2
+                            </span>
+                        </div>
+
+                        <div class="space-y-2.5 mb-6 text-sm font-semibold text-blue-950/90">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-clock text-blue-700 text-base"></i>
+                                <span>3 hrs síncronas + 8 hrs asíncronas por semana</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-calendar-days text-blue-700 text-base"></i>
+                                <span>Duración: 8 meses (96 hrs síncronas)</span>
+                            </div>
+                        </div>
+
+                        <hr class="border-blue-300/80 mb-6">
+
+                        <ul class="space-y-3 mb-8 text-sm font-medium text-blue-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-700 mt-1 flex-shrink-0"></i>
+                                <span>Desenvolvimiento fluido en situaciones de viaje</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-700 mt-1 flex-shrink-0"></i>
+                                <span>Comprensión de ideas principales complejas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-700 mt-1 flex-shrink-0"></i>
+                                <span>Expresión de opiniones y argumentos claros</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-blue-700 mt-1 flex-shrink-0"></i>
+                                <span>Interacción natural con hablantes nativos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" data-course="Inglés Intermedio (B1 - B2)" class="w-full text-center bg-white border border-blue-400 text-blue-900 font-bold py-3 px-4 rounded-xl hover:bg-blue-700 hover:text-white hover:border-blue-700 transition-all duration-300 shadow-sm block">
+                        Inscribirme a Intermedio
+                    </a>
+                </article>
+
+                <article class="group bg-purple-100/70 border-2 border-purple-300 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-display font-bold text-purple-950">Avanzado</h3>
+                            <span class="bg-purple-200 text-purple-900 text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors duration-300 group-hover:bg-purple-600 group-hover:text-white">
+                                C1
+                            </span>
+                        </div>
+
+                        <div class="space-y-2.5 mb-6 text-sm font-semibold text-purple-950/90">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-clock text-purple-700 text-base"></i>
+                                <span>3 hrs síncronas + 7.5 hrs asíncronas por semana</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-regular font-bold fa-calendar-days text-purple-700 text-base"></i>
+                                <span>Duración: 9 meses (108 hrs síncronas)</span>
+                            </div>
+                        </div>
+
+                        <hr class="border-purple-300/80 mb-6">
+
+                        <ul class="space-y-3 mb-8 text-sm font-medium text-purple-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-purple-700 mt-1 flex-shrink-0"></i>
+                                <span>Comprensión de textos extensos y complejos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-purple-700 mt-1 flex-shrink-0"></i>
+                                <span>Uso flexible y fluido del idioma académico/laboral</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-purple-700 mt-1 flex-shrink-0"></i>
+                                <span>Producción de discursos detallados y estructurados</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-purple-700 mt-1 flex-shrink-0"></i>
+                                <span>Dominio de matices implícitos y modismos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" data-course="Inglés Avanzado (C1)" class="w-full text-center bg-white border border-purple-400 text-purple-900 font-bold py-3 px-4 rounded-xl hover:bg-purple-700 hover:text-white hover:border-purple-700 transition-all duration-300 shadow-sm block">
+                        Inscribirme a Avanzado
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="especializados" class="py-20 bg-slate-100/80 border-y border-slate-200 scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-indigo-600 font-semibold text-xs uppercase tracking-wider bg-indigo-50 px-3.5 py-1.5 rounded-full border border-indigo-200">
+                    Enfoque Profesional
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-3 mb-4">
+                    Inglés Especializado
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Diseñado para campos laborales específicos e ingreso a la industria global.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                <article class="group bg-teal-50/70 border-2 border-teal-200 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex justify-between items-start mb-5 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-display font-bold text-teal-950 mb-1">Inglés Técnico</h3>
+                                <p class="text-xs font-bold text-teal-700 mb-2">
+                                    <i class="fa-regular fa-calendar-check mr-1"></i> Duración: 3 Meses (36 hrs síncronas)<sup>3</sup>
+                                </p>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold bg-teal-200/80 text-teal-900 px-3 py-1 rounded-lg border border-teal-300">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>Prerrequisito: Nivel A2 Aprobado</span>
+                                </div>
+                            </div>
+                            <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-2xl transition-colors duration-300 group-hover:bg-teal-600 group-hover:text-white shadow-sm flex-shrink-0">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                        </div>
+
+                        <hr class="border-teal-200 my-4">
+
+                        <p class="text-slate-700 text-sm mb-5 font-medium leading-relaxed min-h-[40px]">
+                            Vocabulario y sintaxis especializada orientada a estudiantes y profesionales de diversas industrias.
+                        </p>
+
+                        <ul class="space-y-2.5 mb-6 text-sm font-medium text-teal-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-teal-600 mt-1 flex-shrink-0"></i>
+                                <span>Salud, Medicina y Enfermería</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-teal-600 mt-1 flex-shrink-0"></i>
+                                <span>Administración, Contabilidad y Finanzas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-teal-600 mt-1 flex-shrink-0"></i>
+                                <span>Mercadeo, Ventas e Inglés Negocios</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-teal-600 mt-1 flex-shrink-0"></i>
+                                <span>Tecnología, Software y Computación</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-teal-600 mt-1 flex-shrink-0"></i>
+                                <span>Redacción de correos y reportes técnicos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="mb-4 text-center bg-white/80 backdrop-blur-sm p-3 rounded-2xl border border-teal-200 shadow-sm">
+                            <span class="text-3xl font-extrabold text-teal-950">$90</span>
+                            <span class="text-sm font-semibold text-slate-600">/ mes</span>
+                        </div>
+                        <a href="#contacto" data-course="Inglés Técnico Especializado" class="w-full text-center bg-white border-2 border-teal-300 text-teal-900 font-bold py-3 px-4 rounded-xl hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 shadow-sm block">
+                            Unirme a inglés técnico
+                        </a>
+                    </div>
+                </article>
+
+                <article class="group bg-amber-50/90 border-2 border-amber-300 rounded-3xl p-7 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden ring-1 ring-amber-400/30">
+                    <div>
+                        <div class="flex justify-between items-start mb-5 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-display font-bold text-amber-950 mb-1">Inglés para Call Center</h3>
+                                <p class="text-xs font-bold text-amber-700 mb-2">
+                                    <i class="fa-regular fa-calendar-check mr-1"></i> Duración: 2 Meses (32 hrs síncronas)<sup>3</sup>
+                                </p>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold bg-amber-200/80 text-amber-900 px-3 py-1 rounded-lg border border-amber-300">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>Prerrequisito: Nivel B1 Aprobado</span>
+                                </div>
+                            </div>
+                            <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl transition-colors duration-300 group-hover:bg-amber-600 group-hover:text-white shadow-sm flex-shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                        </div>
+
+                        <hr class="border-amber-200 my-4">
+
+                        <p class="text-slate-700 text-sm mb-5 font-medium leading-relaxed min-h-[40px]">
+                            Entrenamiento intensivo en fluidez, servicio al cliente BPO<sup>4</sup> y simulacros reales de contratación laboral.
+                        </p>
+
+                        <ul class="space-y-2.5 mb-6 text-sm font-medium text-amber-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-amber-600 mt-1 flex-shrink-0"></i>
+                                <span>Entrenamiento de Mock Interviews<sup>5</sup> reales</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-amber-600 mt-1 flex-shrink-0"></i>
+                                <span>Vocabulario de Atención al Cliente y Métricas BPO<sup>4</sup></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-amber-600 mt-1 flex-shrink-0"></i>
+                                <span>Desescalación y manejo de clientes difíciles</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-amber-600 mt-1 flex-shrink-0"></i>
+                                <span>Modismos, muletillas profesionales y pronunciación</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-amber-600 mt-1 flex-shrink-0"></i>
+                                <span>Simulación de llamadas en vivo y navegación de sistemas</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="mb-4 text-center bg-white/80 backdrop-blur-sm p-3 rounded-2xl border border-amber-200 shadow-sm">
+                            <span class="text-3xl font-extrabold text-amber-950">$105</span>
+                            <span class="text-sm font-semibold text-slate-600">/ mes</span>
+                        </div>
+                        <a href="#contacto" data-course="Inglés para Call Center" class="w-full text-center bg-white border-2 border-amber-400 text-amber-900 font-bold py-3 px-4 rounded-xl hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 shadow-sm block">
+                            Reservar Mi Lugar
+                        </a>
+                    </div>
+                </article>
+
+                <article class="group bg-indigo-50/70 border-2 border-indigo-200 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex justify-between items-start mb-5 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-display font-bold text-indigo-950 mb-1">Certificaciones Internacionales</h3>
+                                <p class="text-xs font-bold text-indigo-700 mb-2">
+                                    <i class="fa-regular fa-calendar-check mr-1"></i> Duración: 2 Meses (24 hrs síncronas)<sup>3</sup>
+                                </p>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold bg-indigo-200/80 text-indigo-900 px-3 py-1 rounded-lg border border-indigo-300">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>Prerrequisito: Nivel B2 Aprobado</span>
+                                </div>
+                            </div>
+                            <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center text-2xl transition-colors duration-300 group-hover:bg-indigo-600 group-hover:text-white shadow-sm flex-shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                        </div>
+
+                        <hr class="border-indigo-200 my-4">
+
+                        <p class="text-slate-700 text-sm mb-5 font-medium leading-relaxed min-h-[40px]">
+                            Estrategias avanzadas y simulacros prácticos para asegurar tu puntaje objetivo en exámenes globales.
+                        </p>
+
+                        <ul class="space-y-2.5 mb-6 text-sm font-medium text-indigo-950/90">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-indigo-600 mt-1 flex-shrink-0"></i>
+                                <span>TOEFL (iBT / ITP)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-indigo-600 mt-1 flex-shrink-0"></i>
+                                <span>IELTS (Academic / General)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-indigo-600 mt-1 flex-shrink-0"></i>
+                                <span>TOEIC (Listening &amp; Reading)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-indigo-600 mt-1 flex-shrink-0"></i>
+                                <span>Cambridge (B2 First / C1 Advanced)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-indigo-600 mt-1 flex-shrink-0"></i>
+                                <span>Duolingo English Test (DET)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="mb-4 text-center bg-white/80 backdrop-blur-sm p-3 rounded-2xl border border-indigo-200 shadow-sm">
+                            <span class="text-3xl font-extrabold text-indigo-950">$120</span>
+                            <span class="text-sm font-semibold text-slate-600">/ mes</span>
+                        </div>
+                        <a href="#contacto" data-course="Preparación de Certificaciones" class="w-full text-center bg-white border-2 border-indigo-300 text-indigo-900 font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 hover:text-white hover:border-indigo-700 transition-all duration-300 shadow-sm block">
+                            Prepararme para mi examen
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorias" class="py-20 bg-white scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-50 px-3.5 py-1.5 rounded-full">Atención Personalizada</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-3 mb-6">Tutorías de Inglés</h2>
+                    <p class="text-slate-600 text-base sm:text-lg mb-8">
+                        ¿Tienes una tarea urgente, un examen próximo o necesitas revisar un ensayo en inglés? Adquiere paquetes de horas flexibles ajustados a tu presupuesto.
+                    </p>
+
+                    <div class="space-y-3 mb-8" id="tutoring-cards-container">
+                        <label class="block cursor-pointer">
+                            <input type="radio" name="tutoring_package" value="Tutorías de Inglés - 1 Hora ($10.00)" class="peer sr-only">
+                            <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-between hover:border-brand-400 hover:bg-white peer-checked:border-2 peer-checked:border-brand-500 peer-checked:bg-brand-50/50 peer-checked:hover:border-brand-500 peer-checked:hover:bg-brand-100/50 peer-checked:shadow-sm peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 transition-all">
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Hora Individual</h4>
+                                    <p class="text-xs text-slate-500">Resuelve dudas puntuales o prepara una clase/presentación</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xl font-bold text-brand-600">$10.00</span>
+                                    <span class="text-xs text-slate-400 block">/ hora</span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="block cursor-pointer">
+                            <input type="radio" name="tutoring_package" value="Tutorías de Inglés - Paquete 3 Horas ($27.00)" class="peer sr-only">
+                            <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-between hover:border-brand-400 hover:bg-white peer-checked:border-2 peer-checked:border-brand-500 peer-checked:bg-brand-50/50 peer-checked:hover:border-brand-500 peer-checked:hover:bg-brand-100/50 peer-checked:shadow-sm peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 transition-all">
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Paquete 3 Horas</h4>
+                                    <p class="text-xs text-slate-500">Ideal para reforzamiento corto o trabajos especiales ($9.00/hr)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xl font-bold text-brand-600">$27.00</span>
+                                    <span class="text-xs text-slate-400 block">($9.00/hr)</span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="block cursor-pointer">
+                            <input type="radio" name="tutoring_package" value="Tutorías de Inglés - Paquete 5 Horas ($40.00)" class="peer sr-only">
+                            <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-between hover:border-brand-400 hover:bg-white peer-checked:border-2 peer-checked:border-brand-500 peer-checked:bg-brand-50/50 peer-checked:hover:border-brand-500 peer-checked:hover:bg-brand-100/50 peer-checked:shadow-sm peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 transition-all">
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Paquete 5 Horas</h4>
+                                    <p class="text-xs text-slate-500">Ahorras $2.00 por hora y avanzas a tu propio ritmo ($8.00/hr)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xl font-bold text-brand-600">$40.00</span>
+                                    <span class="text-xs text-slate-400 block">($8.00/hr)</span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="block cursor-pointer">
+                            <input type="radio" name="tutoring_package" value="Tutorías de Inglés - Paquete 10 Horas ($70.00)" class="peer sr-only" checked>
+                            <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex items-center justify-between hover:border-brand-400 hover:bg-white peer-checked:border-2 peer-checked:border-brand-500 peer-checked:bg-brand-50/50 peer-checked:hover:border-brand-500 peer-checked:hover:bg-brand-100/50 peer-checked:shadow-sm peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 transition-all">
+                                <div>
+                                    <span class="text-[10px] bg-brand-600 text-white font-bold px-2 py-0.5 rounded-full uppercase">Mejor Precio</span>
+                                    <h4 class="font-bold text-slate-900 mt-1">Paquete 10 Horas</h4>
+                                    <p class="text-xs text-slate-500">Máximo ahorro a solo $7.00 la hora con total flexibilidad ($7.00/hr)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xl font-bold text-brand-600">$70.00</span>
+                                    <span class="text-xs text-slate-400 block">($7.00/hr)</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="w-full sm:w-auto">
+                        <button id="submit-tutoring-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-brand-600 text-white font-bold text-base hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/30">
+                            <span>Solicitar Paquete de Tutorías</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 bg-slate-900 text-white p-8 sm:p-10 rounded-3xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-500/20 rounded-full blur-2xl"></div>
+
+                    <h3 class="text-2xl font-display font-bold mb-6">¿En qué podemos ayudarte durante la tutoría?</h3>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Preparación para Exámenes</h4>
+                                <p class="text-xs text-slate-300">Repaso intensivo de gramática, vocabulario y simulacros prácticos.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Revisión de Tareas y Proyectos</h4>
+                                <p class="text-xs text-slate-300">Corrección de ensayos, redacciones académicas y presentaciones profesionales.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Práctica de Conversación Directa</h4>
+                                <p class="text-xs text-slate-300">Sesiones 100% enfocadas en soltar la lengua, ganar fluidez y corregir pronunciación.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Entrevistas Laborales y Simulación</h4>
+                                <p class="text-xs text-slate-300">Preparación y simulacros realistas para afrontar procesos de selección en inglés.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-spell-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Corrección de Gramática y Redacción</h4>
+                                <p class="text-xs text-slate-300">Refuerzo de estructuras complejas escritas y coherencia comunicativa.</p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Nivelación de Temas Específicos</h4>
+                                <p class="text-xs text-slate-300">Aclaración de dudas puntuales en temas complejos a tu propio ritmo.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="requisitos" class="py-20 bg-slate-100 border-t border-slate-200 scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-50 px-3.5 py-1.5 rounded-full">Todo Listo para Empezar</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-3 mb-4">Requisitos para las Clases</h2>
+                <p class="text-slate-600 text-base sm:text-lg">Para aprovechar al máximo cada sesión, solo necesitas asegurarte de contar con lo siguiente:</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Conexión a Internet</h3>
+                    <p class="text-xs text-slate-600">Conexión estable (mínimo 5-10 Mbps) para videoconferencias fluidas en Zoom o Google Meet.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Dispositivo Adecuado</h3>
+                    <p class="text-xs text-slate-600">Computadora, laptop o tablet con cámara y micrófono en buen estado.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Diagnóstico Previo</h3>
+                    <p class="text-xs text-slate-600">Realizar nuestra prueba de nivel gratuita de 15 minutos para ubicarte en el grupo correcto.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Compromiso y Práctica</h3>
+                    <p class="text-xs text-slate-600">Disposición de dedicar al menos 1 a 2 horas adicionales por semana para tareas y repaso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-20 gradient-bg text-white scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-semibold text-sm uppercase tracking-wider bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">Metodología</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-3 mb-4">¿Por qué aprender con nosotros?</h2>
+                <p class="text-slate-300 text-base sm:text-lg">Diseñamos una experiencia de aprendizaje práctica, flexible e interactiva adaptada a tus metas.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                <article class="glass-card p-6 rounded-2xl text-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl mb-4 shadow-md">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-2">Enfoque Práctico</h3>
+                    <p class="text-slate-600 text-sm">Hablarás en inglés desde la primera clase. La gramática se enseña aplicada al contexto real.</p>
+                </article>
+
+                <article class="glass-card p-6 rounded-2xl text-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl mb-4 shadow-md">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-2">Horarios Flexibles</h3>
+                    <p class="text-slate-600 text-sm">Nos adaptamos a tu disponibilidad de tiempo durante la semana o fines de semana.</p>
+                </article>
+
+                <article class="glass-card p-6 rounded-2xl text-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-xl mb-4 shadow-md">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-2">Material Incluido</h3>
+                    <p class="text-slate-600 text-sm">Acceso a guías, PDFs, audios y ejercicios interactivos sin costos adicionales.</p>
+                </article>
+
+                <article class="glass-card p-6 rounded-2xl text-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl mb-4 shadow-md">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-2">Atención Personalizada</h3>
+                    <p class="text-slate-600 text-sm">Feedback constante para corregir errores y acelerar tu progreso conversacional.</p>
+                </article>
+
+                <article class="glass-card p-6 rounded-2xl text-slate-800">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xl mb-4 shadow-md">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-2">Docentes Titulados</h3>
+                    <p class="text-slate-600 text-sm">Equipo conformado por profesionales universitarios titulados en carreras basadas en la enseñanza de idiomas.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-slate-50 scroll-mt-[92px] sm:scroll-mt-[108px] lg:scroll-mt-[86px]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="p-8 sm:p-12">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-50 px-3.5 py-1.5 rounded-full">Comienza Hoy</span>
+                        <h2 class="text-3xl font-display font-bold text-slate-900 mt-3 mb-3">Agenda tu Clase de Prueba o Inscríbete</h2>
+                        <p class="text-slate-600 text-sm sm:text-base">Completa el formulario y nos pondremos en contacto contigo en breve para evaluar tu nivel y definir tus horarios.</p>
+                    </div>
+
+                    <form id="lead-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">
+                                    Nombre completo <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" id="name" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">
+                                    Correo electrónico <span class="text-xs font-normal text-slate-500">(Opcional)</span>
+                                </label>
+                                <input type="email" id="email" placeholder="tucorreo@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">
+                                    WhatsApp / Teléfono <span class="text-red-500">*</span>
+                                </label>
+                                <div class="flex gap-2">
+                                    <select id="country-code" name="country_code" class="px-3 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800 bg-white font-medium text-sm">
+                                        <option value="+1" selected>🇺🇸/🇨🇦 +1</option>
+                                        <option value="+503">🇸🇻 +503</option>
+                                        <option value="+52">🇲🇽 +52</option>
+                                        <option value="+57">🇨🇴 +57</option>
+                                        <option value="+54">🇦🇷 +54</option>
+                                        <option value="+56">🇨🇱 +56</option>
+                                        <option value="+51">🇵🇪 +51</option>
+                                        <option value="+502">🇬🇹 +502</option>
+                                        <option value="+504">🇭🇳 +504</option>
+                                        <option value="+506">🇨🇷 +506</option>
+                                        <option value="+507">🇵🇦 +507</option>
+                                        <option value="+593">🇪🇨 +593</option>
+                                        <option value="+58">🇻🇪 +58</option>
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="otro">🌍 Otro</option>
+                                    </select>
+                                    <input type="tel" id="phone" name="phone" required placeholder="0000 0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="course" class="block text-sm font-semibold text-slate-700 mb-2">
+                                    Curso o Servicio de Interés <span class="text-red-500">*</span>
+                                </label>
+                                <select id="course" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800 bg-white">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Agendar Clase Demo Gratis">Agendar Clase Demo Gratis</option>
+                                    <option value="Inglés Básico (A1 - A2)">Inglés Básico - $55/mes</option>
+                                    <option value="Inglés Intermedio (B1 - B2)">Inglés Intermedio - $55/mes</option>
+                                    <option value="Inglés Avanzado (C1)">Inglés Avanzado - $55/mes</option>
+                                    <option value="Inglés para Call Center">Inglés para Call Center - $105/mes</option>
+                                    <option value="Inglés Técnico Especializado">Inglés Técnico - $90/mes</option>
+                                    <option value="Preparación de Certificaciones">Certificaciones Internacionales - $120/mes</option>
+                                    <optgroup label="Tutorías de Inglés">
+                                        <option value="Tutorías de Inglés - 1 Hora ($10.00)">Tutoría Individual - 1 Hora ($10.00 USD)</option>
+                                        <option value="Tutorías de Inglés - Paquete 3 Horas ($27.00)">Paquete 3 Horas ($27.00 USD - $9.00/hr)</option>
+                                        <option value="Tutorías de Inglés - Paquete 5 Horas ($40.00)">Paquete 5 Horas ($40.00 USD - $8.00/hr)</option>
+                                        <option value="Tutorías de Inglés - Paquete 10 Horas ($70.00)">Paquete 10 Horas ($70.00 USD - $7.00/hr)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">
+                                ¿Cuál es tu objetivo o consulta principal? <span class="text-xs font-normal text-slate-500">(Opcional)</span>
+                            </label>
+                            <textarea id="message" rows="3" placeholder="Cuéntanos brevemente sobre tu disponibilidad o qué metas quieres alcanzar..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all text-slate-800"></textarea>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/80 hover:bg-emerald-50 transition-colors space-y-3">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                    <label class="flex items-center gap-3 cursor-pointer">
+                                        <input type="checkbox" id="promo-discount" name="promo_discount" class="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                                        <span class="text-xs sm:text-sm font-semibold text-emerald-900">
+                                            Aprovechar la promoción del 20% de descuento.
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div id="people-count-container" class="hidden flex items-center gap-3 pt-2 border-t border-emerald-200/60 transition-all">
+                                    <label for="total-people" class="text-xs font-semibold text-emerald-800 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users"></i>
+                                        <span>¿Cuántas personas serían en total?</span>
+                                    </label>
+                                    <select id="total-people" name="total_people" class="px-3 py-1.5 rounded-lg border border-emerald-300 text-xs font-semibold text-emerald-900 bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                        <option value="4">4 personas</option>
+                                        <option value="5+">5+ personas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <label class="flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100/70 transition-colors cursor-pointer">
+                                <input type="checkbox" id="terms" required name="terms" class="mt-1 w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                                <span class="text-xs sm:text-sm text-slate-700">
+                                    Acepto los <a href="#" data-modal="terms" class="text-emerald-700 underline font-semibold hover:text-emerald-800">Términos y Condiciones</a> <span class="text-red-500">*</span>
+                                </span>
+                            </label>
+
+                            <label class="flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100/70 transition-colors cursor-pointer">
+                                <input type="checkbox" id="privacy" required name="privacy" class="mt-1 w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                                <span class="text-xs sm:text-sm text-slate-700">
+                                    He leído y acepto la <a href="#" data-modal="privacy" class="text-emerald-700 underline font-semibold hover:text-emerald-800">Política de Privacidad</a> <span class="text-red-500">*</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base shadow-lg shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enviar Solicitud e Inscribirme</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="success-box" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-center">
+                        <i class="fa-solid fa-circle-check text-2xl text-emerald-600 mb-2"></i>
+                        <h4 class="font-bold text-lg">¡Solicitud recibida con éxito!</h4>
+                        <p class="text-sm">Nos pondremos en contacto contigo vía WhatsApp o correo lo antes posible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 space-y-1.5 text-center text-xs text-slate-500 max-w-2xl mx-auto">
+                <p><sup>1</sup> Aplican <a href="#" data-modal="terms" class="text-brand-600 underline font-semibold hover:text-brand-700">términos y condiciones</a> para promociones e inscripciones grupales.</p>
+                <p><sup>2</sup> Consulta el estándar internacional del <a href="#" data-modal="mcer" class="text-brand-600 underline font-semibold hover:text-brand-700">Marco Común Europeo de Referencia</a> para revisar la tabla de niveles y competencias lingüísticas.</p>
+                <p><sup>3</sup> La duración mostrada en las tarjetas es sugerida y está abierta a modificaciones según las necesidades, metas o disponibilidad de cada estudiante.</p>
+                <p><sup>4</sup> <em>Business Process Outsourcing</em> (BPO): servicios profesionales de atención al cliente y soporte internacional.</p>
+                <p><sup>5</sup> Las <em>mock interviews</em> son simulacros prácticos de entrevistas laborales en inglés para ganar fluidez y confianza.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 pt-12 pb-[108px] sm:pb-[92px] lg:pb-[90px] border-t border-slate-800">
+        <div class="w-full px-4 sm:px-6 lg:pl-5 xl:pl-8 lg:pr-12 xl:pr-14">
+            <div class="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-[minmax(260px,360px)_auto_auto_auto] lg:justify-between gap-8 lg:gap-10 xl:gap-14 mb-6">
+                <div class="col-span-2 md:col-span-12 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-2.5 text-2xl font-display font-bold text-white tracking-tight mb-4 whitespace-nowrap">
+                        <img src="assets/img/logo.png" alt="Logo Languages4Ever" class="w-14 h-14 rounded-full object-cover border-2 border-slate-700 flex-shrink-0">
+                        <span>Languages4Ever</span>
+                    </a>
+                    <p class="text-sm font-medium text-slate-400 max-w-sm leading-relaxed">
+                        Aprende Inglés, Francés y Español de forma efectiva con clases 100% online en vivo y acceso a L4E App.
+                    </p>
+                </div>
+
+                <div class="col-span-1 md:col-span-3 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Explorar</h4>
+                    <ul class="space-y-2.5 text-sm font-medium whitespace-nowrap">
+                        <li><a href="index.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Home</a></li>
+                        <li><a href="ingles.html" class="text-white font-semibold transition-colors">Inglés</a></li>
+                        <li><a href="espanol.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Español</a></li>
+                        <li><a href="frances.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Francés</a></li>
+                        <li><a href="app.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">App</a></li>
+                        <li><a href="tienda.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Tienda</a></li>
+                        <li><a href="test-nivel.html" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Test de Nivel</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Inglés</h4>
+                    <ul class="space-y-2.5 text-sm font-medium whitespace-nowrap">
+                        <li><a href="#cursos" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Niveles</a></li>
+                        <li><a href="#especializados" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Especializaciones</a></li>
+                        <li><a href="#tutorias" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Tutorías</a></li>
+                        <li><a href="#requisitos" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Requisitos</a></li>
+                        <li><a href="#metodologia" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Metodología</a></li>
+                        <li><a href="#contacto" class="text-slate-400 [@media(hover:hover)]:hover:text-white active:text-white transition-colors">Inscripción</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 md:col-span-5 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contacto</h4>
+                    <ul class="space-y-3 text-sm font-medium whitespace-nowrap">
+                        <li class="flex items-center gap-2.5">
+                            <a href="https://wa.me/50379209202?text=%C2%A1Hola!%20Deseo%20obtener%20soporte%20e%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20ingl%C3%A9s." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 text-slate-400 [@media(hover:hover)]:hover:text-emerald-400 active:text-emerald-400 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-emerald-400 text-base flex-shrink-0"></i>
+                                <span>WhatsApp Support</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2.5 text-slate-400">
+                            <i class="fa-regular fa-envelope text-brand-400 text-base flex-shrink-0"></i>
+                            <span>support@languages4ever.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-5 border-t border-slate-800 text-xs font-medium text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+                <p>&copy; 2026 Languages4Ever. Todos los derechos reservados.</p>
+                <div class="flex items-center space-x-6 whitespace-nowrap">
+                    <a href="#" data-modal="terms" class="[@media(hover:hover)]:hover:text-slate-300 active:text-slate-300 transition-colors">Términos y Condiciones</a>
+                    <a href="#" data-modal="privacy" class="[@media(hover:hover)]:hover:text-slate-300 active:text-slate-300 transition-colors">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <dialog id="info-modal" class="p-0 m-auto bg-transparent border-0 max-w-2xl w-[calc(100%-2rem)] rounded-3xl shadow-2xl backdrop:bg-slate-900/80 backdrop:backdrop-blur-sm">
+        <div class="bg-white rounded-3xl w-full max-h-[85dvh] flex flex-col overflow-hidden border border-slate-200">
+            <div class="bg-slate-900 text-white p-4 sm:p-5 flex items-center justify-between border-b border-slate-800 flex-shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-brand-400 text-lg"></i>
+                    <h3 id="modal-title" class="font-display font-bold text-lg sm:text-xl">Información General</h3>
+                </div>
+                <button type="button" data-close-modal class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" aria-label="Cerrar ventana">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="flex items-stretch border-b border-slate-200 bg-slate-50 px-2 sm:px-4 pt-2.5 gap-1.5 sm:gap-2 flex-shrink-0">
+                <button type="button" data-modal-tab="terms" id="tab-btn-terms" class="flex-1 px-2.5 sm:px-4 py-2.5 rounded-t-xl font-semibold text-xs sm:text-sm leading-snug text-center transition-all border-b-2">
+                    Términos y Condiciones
+                </button>
+                <button type="button" data-modal-tab="privacy" id="tab-btn-privacy" class="flex-1 px-2.5 sm:px-4 py-2.5 rounded-t-xl font-semibold text-xs sm:text-sm leading-snug text-center transition-all border-b-2">
+                    Política de Privacidad
+                </button>
+                <button type="button" data-modal-tab="mcer" id="tab-btn-mcer" class="flex-1 px-2.5 sm:px-4 py-2.5 rounded-t-xl font-semibold text-xs sm:text-sm leading-snug text-center transition-all border-b-2">
+                    MCER
+                </button>
+            </div>
+
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-4 text-slate-700 text-sm leading-relaxed flex-1 min-h-0">
+                <div id="modal-content-terms" class="modal-tab-content space-y-3 hidden">
+                    <h4 class="font-bold text-slate-900 text-base">Términos y Condiciones de Servicio</h4>
+                    <p>Bienvenido a Languages4Ever. Al inscribirte en nuestros cursos, tutorías o clases demo, aceptas los siguientes términos:</p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-600">
+                        <li><strong>Clases y Asistencia:</strong> Las clases síncronas se imparten en vivo a través de Zoom o Google Meet. La tolerancia de espera es de 10 minutos.</li>
+                        <li><strong>Pagos y Cancelaciones:</strong> Las mensualidades y paquetes de tutorías se abonan por adelantado. No se realizan reembolsos tras el inicio del período contratado.</li>
+                        <li><strong>Descuento Grupal (20%):</strong> La promoción aplica únicamente al inscribirse 2 o más personas en el mismo ciclo de facturación.</li>
+                        <li><strong>Uso del Material:</strong> El material didáctico proporcionado es de uso exclusivo personal y no puede ser redistribuido o comercializado.</li>
+                    </ul>
+                </div>
+
+                <div id="modal-content-privacy" class="modal-tab-content space-y-3 hidden">
+                    <h4 class="font-bold text-slate-900 text-base">Política de Privacidad</h4>
+                    <p>En Languages4Ever nos tomamos muy en serio la protección de sus datos personales:</p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-600">
+                        <li><strong>Recopilación de Datos:</strong> Solicitamos nombre, correo y teléfono/WhatsApp únicamente para coordinar horarios, pruebas de nivel y soporte académico.</li>
+                        <li><strong>Uso de la Información:</strong> Sus datos no serán vendidos, cedidos ni compartidos con terceros ajenos a nuestra institución.</li>
+                        <li><strong>Seguridad:</strong> Implementamos medidas tecnológicas para garantizar que su información personal permanezca segura.</li>
+                        <li><strong>Derechos del Usuario:</strong> Puede solicitar la modificación o eliminación de sus datos en cualquier momento escribiendo a support@languages4ever.com.</li>
+                    </ul>
+                </div>
+
+                <div id="modal-content-mcer" class="modal-tab-content space-y-3 hidden">
+                    <h4 class="font-bold text-slate-900 text-base">Marco Común Europeo de Referencia (MCER)</h4>
+                    <p>El MCER es el estándar internacional que describe las competencias lingüísticas en seis niveles progresivos:</p>
+                    <div class="space-y-2.5 text-xs sm:text-sm">
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+                            <strong class="text-emerald-900 block font-bold mb-1">A1 (Acceso / Principiante):</strong>
+                            <span>Comprende y utiliza expresiones cotidianas muy básicas y frases sencillas para presentarse, pedir información personal elemental y relacionarse si el interlocutor habla despacio y con claridad.</span>
+                        </div>
+                        <div class="p-3 bg-emerald-50/70 rounded-xl border border-emerald-200">
+                            <strong class="text-emerald-900 block font-bold mb-1">A2 (Plataforma / Básico):</strong>
+                            <span>Comprende frases y expresiones de uso frecuente relacionadas con áreas de relevancia inmediata (familia, compras, entorno local, empleo) y se comunica en tareas simples y cotidianas.</span>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-xl border border-blue-200">
+                            <strong class="text-blue-900 block font-bold mb-1">B1 (Umbral / Intermedio):</strong>
+                            <span>Se desenvuelve en la mayor parte de situaciones de viaje, comprende ideas principales sobre temas conocidos y produce textos sencillos y coherentes sobre experiencias, deseos y planes.</span>
+                        </div>
+                        <div class="p-3 bg-blue-50/70 rounded-xl border border-blue-200">
+                            <strong class="text-blue-900 block font-bold mb-1">B2 (Avanzado / Intermedio Alto):</strong>
+                            <span>Entiende las ideas principales de textos complejos y técnicos, interactúa con hablantes nativos con un grado suficiente de fluidez y naturalidad, y defiende puntos de vista con claridad.</span>
+                        </div>
+                        <div class="p-3 bg-purple-50 rounded-xl border border-purple-200">
+                            <strong class="text-purple-900 block font-bold mb-1">C1 (Dominio Operativo Eficaz):</strong>
+                            <span>Comprende una amplia variedad de textos extensos y exigentes reconociendo sentidos implícitos, y se expresa de forma fluida, espontánea y bien estructurada en ámbitos académicos y profesionales.</span>
+                        </div>
+                        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200">
+                            <strong class="text-amber-900 block font-bold mb-1">C2 (Maestría):</strong>
+                            <span>Comprende con facilidad prácticamente todo lo que oye o lee, reconstruye información de diversas fuentes habladas o escritas y se expresa espontáneamente con precisión casi nativa y matices sutiles.</span>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-100 rounded-xl border border-slate-300 mt-3">
+                            <strong class="text-slate-900 flex items-center gap-1.5 font-bold mb-1">
+                                <i class="fa-solid fa-graduation-cap text-brand-600"></i>
+                                <span>¿Por qué no enseñamos el nivel C2 en la academia?</span>
+                            </strong>
+                            <p class="text-slate-600">Nuestros programas regulares culminan en <strong>C1</strong> porque este nivel certifica el dominio operativo completo exigido por universidades internacionales, empresas globales y certificaciones oficiales. El nivel <strong>C2</strong> representa una especialización filológica, literaria o de interpretación simultánea que se consolida mediante inmersión prolongada en países angloparlantes o estudios lingüísticos de posgrado, más allá del alcance de un curso comunicativo y profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-50 border-t border-slate-200 text-right flex-shrink-0">
+                <button type="button" data-close-modal class="px-5 py-2 rounded-xl bg-slate-800 text-white font-semibold text-xs hover:bg-slate-900 transition-colors">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <a href="https://wa.me/50379209202?text=%C2%A1Hola!%20Estoy%20interesado%20en%20aprender%20ingl%C3%A9s%20con%20Languages4Ever.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n?"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="fixed bottom-[44px] right-[20px] z-40 h-[37px] w-[166px] flex items-center justify-center gap-2 bg-slate-900/95 hover:bg-emerald-700 text-white border border-slate-700/80 px-3.5 rounded-full shadow-xl transition-all duration-300 backdrop-blur-md hover:scale-105 group"
+       aria-label="Info"
+       title="Info">
+        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm group-hover:text-white transition-colors"></i>
+        <span class="font-semibold text-[13px] tracking-tight">Info</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const WHATSAPP_NUMBER = '50379209202';
+
+            const headerInner = document.getElementById('header-inner');
+            const headerPart1 = document.getElementById('header-part-1');
+            const headerRightCol = document.getElementById('header-right-col');
+            const headerPart2 = document.getElementById('header-part-2');
+            const headerPart3 = document.getElementById('header-part-3');
+            const pcDropdownBtn = document.getElementById('pc-dropdown-btn');
+            const pcDropdownIcon = document.getElementById('pc-dropdown-icon');
+            const pcToggleBarBtn = document.getElementById('pc-toggle-bar-btn');
+            const pcToggleBarIcon = document.getElementById('pc-toggle-bar-icon');
+            const customDropdown = document.getElementById('custom-dropdown');
+            const closeDropdownBtn = document.getElementById('close-dropdown-btn');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const sectionLinks = document.querySelectorAll('.section-link');
+            const sections = document.querySelectorAll('section');
+
+            const courseSelect = document.getElementById('course');
+            const promoCheckbox = document.getElementById('promo-discount');
+            const peopleContainer = document.getElementById('people-count-container');
+            const submitTutoringBtn = document.getElementById('submit-tutoring-btn');
+            const leadForm = document.getElementById('lead-form');
+            const successBox = document.getElementById('success-box');
+            const infoModal = document.getElementById('info-modal');
+
+            function updateCartBadges() {
+                try {
+                    const savedCart = JSON.parse(localStorage.getItem('l4e_cart') || '[]');
+                    const totalQty = savedCart.reduce((acc, item) => acc + (item.qty || 1), 0);
+                    const desktopBadge = document.getElementById('cart-badge');
+                    const mobileBadge = document.getElementById('mobile-cart-badge');
+                    if (desktopBadge) desktopBadge.textContent = totalQty;
+                    if (mobileBadge) mobileBadge.textContent = totalQty;
+                } catch (e) {}
+            }
+            updateCartBadges();
+
+            function selectCourse(courseName) {
+                if (courseSelect) {
+                    courseSelect.value = courseName;
+                }
+            }
+
+            function togglePeopleSelect() {
+                if (promoCheckbox && peopleContainer) {
+                    peopleContainer.classList.toggle('hidden', !promoCheckbox.checked);
+                }
+            }
+
+            function switchModalTab(tab) {
+                ['terms', 'privacy', 'mcer'].forEach(key => {
+                    const content = document.getElementById(`modal-content-${key}`);
+                    const btn = document.getElementById(`tab-btn-${key}`);
+                    if (!content || !btn) return;
+
+                    const isActive = key === tab;
+                    content.classList.toggle('hidden', !isActive);
+                    btn.classList.toggle('border-brand-600', isActive);
+                    btn.classList.toggle('text-brand-600', isActive);
+                    btn.classList.toggle('bg-white', isActive);
+                    btn.classList.toggle('border-transparent', !isActive);
+                    btn.classList.toggle('text-slate-600', !isActive);
+                });
+            }
+
+            function openModal(tab = 'terms') {
+                if (!infoModal) return;
+                if (!infoModal.open) {
+                    infoModal.showModal();
+                }
+                switchModalTab(tab);
+            }
+
+            mobileMenuBtn?.addEventListener('click', () => {
+                mobileMenu?.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu?.classList.add('hidden');
+                });
+            });
+
+            function setDropdownState(isOpen) {
+                if (!customDropdown) return;
+                customDropdown.classList.toggle('hidden', !isOpen);
+                if (pcDropdownIcon) {
+                    pcDropdownIcon.classList.toggle('fa-bars', !isOpen);
+                    pcDropdownIcon.classList.toggle('fa-xmark', isOpen);
+                }
+                if (pcDropdownBtn) {
+                    pcDropdownBtn.title = isOpen ? 'Cerrar menú' : 'Abrir menú';
+                    pcDropdownBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+                }
+            }
+
+            pcDropdownBtn?.addEventListener('click', () => {
+                const willOpen = customDropdown?.classList.contains('hidden');
+                setDropdownState(Boolean(willOpen));
+            });
+
+            closeDropdownBtn?.addEventListener('click', () => {
+                setDropdownState(false);
+            });
+
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    setDropdownState(false);
+                });
+            });
+
+            let isTopBarHidden = false;
+            function syncSectionScrollMargin() {
+                const useCollapsedOffset = isTopBarHidden && window.innerWidth >= 1024;
+                sections.forEach(sec => {
+                    sec.style.scrollMarginTop = useCollapsedOffset ? '5px' : '';
+                });
+            }
+            window.addEventListener('resize', syncSectionScrollMargin, { passive: true });
+
+            pcToggleBarBtn?.addEventListener('click', () => {
+                isTopBarHidden = !isTopBarHidden;
+                headerPart1?.classList.toggle('lg:hidden', isTopBarHidden);
+                headerPart2?.classList.toggle('lg:hidden', isTopBarHidden);
+                headerInner?.classList.toggle('lg:grid', !isTopBarHidden);
+                headerInner?.classList.toggle('lg:grid-cols-[auto_1fr]', !isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:h-[117px]', !isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:pt-[44px]', !isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:pb-[25px]', !isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:justify-between', !isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:h-9', isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:justify-center', isTopBarHidden);
+                headerRightCol?.classList.toggle('lg:mx-auto', isTopBarHidden);
+                syncSectionScrollMargin();
+
+                if (pcToggleBarIcon) {
+                    pcToggleBarIcon.classList.toggle('fa-eye-slash', !isTopBarHidden);
+                    pcToggleBarIcon.classList.toggle('fa-eye', isTopBarHidden);
+                }
+                if (pcToggleBarBtn) {
+                    pcToggleBarBtn.title = isTopBarHidden ? 'Mostrar barra superior' : 'Ocultar barra superior';
+                    pcToggleBarBtn.setAttribute('aria-label', isTopBarHidden ? 'Mostrar barra superior' : 'Ocultar barra superior');
+                }
+            });
+
+            const subNavScroll = document.getElementById('sub-nav-scroll');
+            let lastActiveSection = '';
+
+            function updateSubNav(sectionId) {
+                sectionLinks.forEach(link => {
+                    const isCurrent = link.dataset.section === sectionId;
+                    link.classList.toggle('text-brand-600', isCurrent);
+                    link.classList.toggle('font-bold', isCurrent);
+                });
+
+                if (!subNavScroll || !sectionId) return;
+                const activeLink = subNavScroll.querySelector(`.section-link[data-section="${sectionId}"]`);
+                if (!activeLink) return;
+
+                if (sectionId === 'cursos' || sectionId === 'especializados') {
+                    subNavScroll.scrollTo({ left: 0, behavior: 'smooth' });
+                } else if (sectionId === 'contacto' || sectionId === 'metodologia') {
+                    const maxScroll = subNavScroll.scrollWidth - subNavScroll.clientWidth;
+                    subNavScroll.scrollTo({ left: Math.max(0, maxScroll), behavior: 'smooth' });
+                } else if (sectionId === 'tutorias' || sectionId === 'requisitos') {
+                    const linkCenter = activeLink.offsetLeft + (activeLink.offsetWidth / 2);
+                    const targetLeft = linkCenter - (subNavScroll.clientWidth / 2);
+                    subNavScroll.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+                }
+            }
+
+            sectionLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    link.blur();
+                    const sec = link.dataset.section;
+                    lastActiveSection = sec;
+                    updateSubNav(sec);
+                });
+            });
+
+            document.querySelectorAll('footer a').forEach(link => {
+                link.addEventListener('click', () => {
+                    link.blur();
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                let currentSection = '';
+
+                const offsetThreshold = window.innerWidth >= 1024 ? 180 : 160;
+                sections.forEach(section => {
+                    const top = section.offsetTop - offsetThreshold;
+                    if (scrollY >= top && scrollY < top + section.offsetHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                if (currentSection && currentSection !== lastActiveSection) {
+                    lastActiveSection = currentSection;
+                    updateSubNav(currentSection);
+                } else if (!currentSection && lastActiveSection) {
+                    lastActiveSection = '';
+                    sectionLinks.forEach(link => {
+                        link.classList.remove('text-brand-600', 'font-bold');
+                    });
+                }
+            }, { passive: true });
+
+            document.querySelectorAll('[data-course]').forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    selectCourse(trigger.dataset.course);
+                    if (trigger.hasAttribute('data-close-dropdown')) {
+                        setDropdownState(false);
+                    }
+                });
+            });
+
+            document.querySelectorAll('[data-apply-promo]').forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    if (promoCheckbox) {
+                        promoCheckbox.checked = true;
+                        togglePeopleSelect();
+                    }
+                });
+            });
+
+            promoCheckbox?.addEventListener('change', togglePeopleSelect);
+
+            submitTutoringBtn?.addEventListener('click', () => {
+                const selectedRadio = document.querySelector('input[name="tutoring_package"]:checked');
+                if (selectedRadio) {
+                    selectCourse(selectedRadio.value);
+                }
+                document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            document.querySelectorAll('[data-modal]').forEach(trigger => {
+                trigger.addEventListener('click', event => {
+                    event.preventDefault();
+                    openModal(trigger.dataset.modal);
+                });
+            });
+
+            document.querySelectorAll('[data-modal-tab]').forEach(tabBtn => {
+                tabBtn.addEventListener('click', () => {
+                    switchModalTab(tabBtn.dataset.modalTab);
+                });
+            });
+
+            document.querySelectorAll('[data-close-modal]').forEach(closeBtn => {
+                closeBtn.addEventListener('click', () => infoModal?.close());
+            });
+
+            infoModal?.addEventListener('click', event => {
+                if (event.target === infoModal) {
+                    infoModal.close();
+                }
+            });
+
+            leadForm?.addEventListener('submit', event => {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const countryCode = document.getElementById('country-code').value;
+                const phone = document.getElementById('phone').value.trim();
+                const course = courseSelect.value;
+                const message = document.getElementById('message').value.trim();
+                const promoChecked = promoCheckbox?.checked;
+                const totalPeople = document.getElementById('total-people')?.value || '2';
+
+                let msgText = '¡Hola Languages4Ever! Deseo inscribirme / solicitar información:\n\n';
+                msgText += `👤 *Nombre:* ${name}\n`;
+                if (email) msgText += `📧 *Correo:* ${email}\n`;
+                msgText += `📱 *WhatsApp:* ${countryCode} ${phone}\n`;
+                msgText += `📚 *Curso/Servicio:* ${course}\n`;
+                if (promoChecked) {
+                    msgText += `🎉 *Promoción 20% OFF:* Sí (${totalPeople} personas)\n`;
+                }
+                if (message) msgText += `💬 *Consulta:* ${message}\n`;
+
+                const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msgText)}`;
+                window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+                leadForm.classList.add('hidden');
+                successBox?.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
